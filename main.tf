@@ -1,13 +1,21 @@
-
+terraform {
+  
+  required_providers {
+      aws = {
+          source = "hashicorp/aws"
+          version = "4.5.0"
+      }
+  }
+}
 
 # Central State File
-terraform {
+
   provider "aws" {
   region                   = "us-east-2"
   shared_credentials_files = ["~/.aws/credentials"]
   profile                  = "default"
 }
-}
+
 
 # Define the VPC
 resource "aws_vpc" "main" {
