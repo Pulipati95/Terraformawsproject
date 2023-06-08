@@ -1,10 +1,10 @@
 terraform {
   
-  backend "s3" {
-    bucket = "aws-bucket-terraform"
-    key    = "terraform.tfstate"
-    region = "us-east-2"
-  }
+    required_providers {
+      aws = {
+          source = "hashicorp/aws"
+          version = "4.5.0"
+      }
 }
 
 # Central State File
