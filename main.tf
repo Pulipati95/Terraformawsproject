@@ -1,16 +1,12 @@
-provider "aws" {
+
+
+# Central State File
+terraform {
+  provider "aws" {
   region                   = "us-east-2"
   shared_credentials_files = ["~/.aws/credentials"]
   profile                  = "default"
 }
-
-# Central State File
-terraform {
-  backend "s3" {
-    bucket = "terraform-project-new"
-    key    = "terraform.tfstate"
-    region = "us-east-2"
-  }
 }
 
 # Define the VPC
