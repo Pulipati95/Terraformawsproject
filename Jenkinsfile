@@ -5,7 +5,6 @@ pipeline {
         stage('Terraform Init') {
             steps {
                 // Initialize Terraform and set up the backend
-                    sh 'terraform init -backend-config="bucket=aws-bucket-terraform" -backend-config="key=terraform.tfstate" -backend-config="region=ap-south-1"'
                     sh 'terraform init -reconfigure'
             }
         }
