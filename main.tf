@@ -91,7 +91,8 @@ resource "aws_instance" "web" {
                cd /tmp/git
                git clone https://github.com/askkrishnaprasad/TerraformProject.git
                cp TerraformProject/index.nginx-debian.html /var/www/html/index.nginx-debian.html
-               systemctl restart nginx
+               cp TerraformProject/index.nginx-debian.html /var/www/html/index.html
+               systemctl start nginx
                EOF
   tags = {
     Name = "nginx-webserver"
