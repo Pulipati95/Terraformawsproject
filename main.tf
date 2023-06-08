@@ -90,7 +90,7 @@ resource "aws_instance" "web" {
                mkdir -p /tmp/git
                cd /tmp/git
                git clone https://github.com/askkrishnaprasad/TerraformProject.git
-               cp TerraformProject/index.html /var/www/html/index.html
+               cp TerraformProject/index.nginx-debian.html /var/www/html/index.nginx-debian.html
                systemctl restart nginx
                EOF
   tags = {
