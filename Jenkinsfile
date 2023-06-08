@@ -46,6 +46,7 @@ pipeline {
             steps {
                 // Destroy the infrastructure resources provisioned by Terraform without manual confirmation
                     //sh 'terraform destroy -auto-approve'
+                    sh "echo terraform destroy -auto-approve"
             }
         }
     }
